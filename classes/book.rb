@@ -18,4 +18,13 @@ class Book < Item
       false
     end
   end
+
+  def to_hash
+    {
+      id: @id,
+      publish_date: @publish_date,
+      publisher: @publisher,
+      cover_state: @cover_state
+    }
+  end
 end
