@@ -5,7 +5,7 @@ class Label < Item
   attr_accessor :title, :color, :items
 
   def initialize(title, color)
-    super()
+    super(publish_date)
     @id = rand(1...1000)
     @title = title
     @color = color
