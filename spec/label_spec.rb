@@ -1,5 +1,5 @@
-require './label'
-require './item'
+require './classes/label'
+require './classes/item'
 
 describe Label do
   context 'When testing Label class' do
