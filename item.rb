@@ -1,33 +1,42 @@
 class Item
-  attr_accessor :genre, :author, :source, :label
+  attr_reader :id
+  attr_accessor :publish_date, :archived, :genres, :authors, :sources, :labels
 
   def initialize(publish_date, archived)
     @id = rand(1...1000)
     @publish_date = publish_date
     @archived = archived
+    @genres = []
+    @authors = []
+    @sources = []
+    @labels = []
   end
 
-  def can_be_archived?; end
-
-  def move_to_archive; end
-
-  def genre(genre)
-    @genre = genre
-    genre.add_item(self) unless genre.items.includes?(self)
+  def can_be_archived?
+    # Determining if the item can be archived
   end
 
-  def author(author)
-    @author = author
-    author.add_item(self) unless author.items.includes?(self)
+  def move_to_archive
+    # Moving the item to the archive
   end
 
-  def source(source)
-    @source = source
-    source.add_item(self) unless source.items.includes?(self)
+  def add_genre(genre)
+    genres << genre
+    genre.add_item(self)
   end
 
-  def label(label)
-    @label = label
-    label.add_item(self) unless label.items.includes?(self)
+  def add_author(author)
+    authors << author
+    author.add_item(self)
+  end
+
+  def add_source(source)
+    sources << source
+    source.add_item(self)
+  end
+
+  def add_label(label)
+    labels << label
+    label.add_item(self)
   end
 end
