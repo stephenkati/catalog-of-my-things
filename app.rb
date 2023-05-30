@@ -15,8 +15,8 @@ class App
   def list_all_books
     puts 'No books found' if @books.empty?
     @books.each do |book|
-      puts"Publish date: #{book['publish_date']}", "Publisher: #{book['publisher']}",
-      "Cover state: #{book['cover_state']}"
+      puts "Publish date: #{book['publish_date']}", "Publisher: #{book['publisher']}",
+           "Cover state: #{book['cover_state']}"
     end
     puts ' '
   end
@@ -37,9 +37,8 @@ class App
     puts "Enter the book's cover state (Good/bad):"
     cover_state = gets.chomp
     @books << Book.new(publish_date, publisher, cover_state).to_hash
-    puts "Book added!"
+    puts 'Book added!'
     puts ' '
     file_write('./data/books.json', @books)
   end
-
 end

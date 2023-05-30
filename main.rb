@@ -20,7 +20,7 @@ def display_prompts
 end
 
 loop do
-  app = App.new()
+  app = App.new
   display_prompts
   option = gets.chomp.to_i
   case option
