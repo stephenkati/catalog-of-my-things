@@ -1,3 +1,5 @@
+require './app'
+
 def display_prompts
   puts 'Welcome to catalog of my things'
   puts ' '
@@ -18,29 +20,30 @@ def display_prompts
 end
 
 loop do
+  app = App.new()
   display_prompts
   option = gets.chomp.to_i
   case option
   when 1
-    list_all_books
+    app.list_all_books
   when 2
-    list_all_music_albums
+    app.list_all_music_albums
   when 3
-    list_of_games
+    app.list_of_games
   when 4
-    list_all_genres
+    app.list_all_genres
   when 5
-    list_all_labels
+    app.list_all_labels
   when 6
-    list_all_authors
+    app.list_all_authors
   when 7
-    list_all_sources
+    app.list_all_sources
   when 8
-    add_a_book
+    app.add_a_book
   when 9
-    add_a_music_album
+    app.add_a_music_album
   when 10
-    add_a_game
+    app.add_a_game
   when 11
     break
   else
