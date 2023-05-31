@@ -5,6 +5,7 @@ class Genre < Item
   attr_reader :id
 
   def initialize(name)
+    super()
     @id = rand(1...1000)
     @name = name
     @items = []
@@ -12,6 +13,6 @@ class Genre < Item
 
   def add_item(item)
     @items << item
-    genre.item = self
+    item.genre = self
   end
 end
