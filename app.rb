@@ -53,7 +53,7 @@ class App
     puts 'No music albums found' if @music_albums.empty?
     @music_albums.each do |album|
       puts "ID: #{album['id']}",
-      "Publish Date: #{album['publish_date']}, On Spotify: #{album['on_spotify']}"
+           "Publish Date: #{album['publish_date']}, On Spotify: #{album['on_spotify']}"
     end
     puts ' '
   end
