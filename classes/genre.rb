@@ -17,7 +17,7 @@ class Genre
     {
       id: @id,
       name: @name,
-      items: @items.map { |item| item.to_hash }
+      items: @items.map(&:to_hash)
     }
   end
 end
