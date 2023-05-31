@@ -1,0 +1,13 @@
+CREATE DATABASE catalog;
+
+CREATE TABLE book(
+  id INT SERIAL PRIMARY KEY,
+  publisher VARCHAR(100),
+  cover_state VARCHAR(50)
+);
+
+CREATE TABLE label(
+  id INT SERIAL PRIMARY KEY,
+  title VARCHAR(100),
+  color VARCHAR(100)
+);
