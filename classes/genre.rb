@@ -1,11 +1,8 @@
-require './item'
-
-class Genre < Item
+class Genre
   attr_accessor :name, :items
   attr_reader :id
 
   def initialize(name)
-    super()
     @id = rand(1...1000)
     @name = name
     @items = []
