@@ -8,8 +8,7 @@ require './classes/author'
 require './data/preserve_data'
 
 class App
-  attr_accessor :books, :labels, :items, :music_albums, :genres
-  attr_accessor :games, :authors
+  attr_accessor :books, :labels, :items, :music_albums, :genres, :games, :authors
 
   def initialize
     @items = []
@@ -90,7 +89,7 @@ class App
     puts 'No games found' if @games.empty?
     @games.each do |game|
       puts "ID: #{game['id']}, Publish Date: #{game['publish_date']}",
-            "Multiplayer: #{game['multiplayer']}, Last Played: #{game['last_played']}"
+           "Multiplayer: #{game['multiplayer']}, Last Played: #{game['last_played']}"
     end
     puts ' '
   end
@@ -118,5 +117,4 @@ class App
     puts 'Game added'
     puts ' '
   end
-
 end

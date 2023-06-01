@@ -2,7 +2,7 @@ require 'json'
 
 def file_read(file)
   if File.exist?(file)
-    if File.size(file).zero?
+    if File.empty?(file)
       []
     else
       file_data = File.read(file)
