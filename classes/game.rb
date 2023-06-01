@@ -15,4 +15,13 @@ class Game < Item
   def can_be_archived?
     super && Time.now.year - Date.parse(@last_played).year > 2
   end
+
+  def to_hash
+    {
+      id: @id,
+      publish_date: @publish_date,
+      multiplayer: @multiplayer,
+      last_played: @last_played
+    }
+  end
 end
