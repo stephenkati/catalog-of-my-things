@@ -13,4 +13,13 @@ class Author
     @items << item
     item.author = self
   end
+
+  def to_hash
+    {
+      id: @id,
+      firstname: @firstname,
+      lastname: @lastname,
+      items: @items.map(&:to_hash)
+    }
+  end
 end

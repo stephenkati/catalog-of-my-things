@@ -11,11 +11,10 @@ def display_prompts
   puts "4 - List all genres (e.g 'Comedy', 'Thriller')"
   puts "5 - List all labels (e.g. 'Gift', 'New')"
   puts "6 - List all authors (e.g. 'Stephen King')"
-  puts "7 - List all sources (e.g. 'From a friend', 'Online shop')"
-  puts '8 - Add a book'
-  puts '9 - Add a music album'
-  puts '10 - Add a game'
-  puts '11 - Exit'
+  puts '7 - Add a book'
+  puts '8 - Add a music album'
+  puts '9 - Add a game'
+  puts '10 - Exit'
   puts ' '
 end
 
@@ -37,14 +36,13 @@ loop do
   when 6
     app.list_all_authors
   when 7
-    app.list_all_sources
-  when 8
     app.add_a_book
-  when 9
+  when 8
     app.add_a_music_album
-  when 10
+  when 9
     app.add_a_game
-  when 11
+  when 10
+    puts 'Thanks for using our catalog, see you soon.'
     break
   else
     'Option is Invalid!'
