@@ -1,4 +1,4 @@
-require './item'
+require './classes/item'
 require 'date'
 
 class Game < Item
@@ -13,6 +13,6 @@ class Game < Item
   end
 
   def can_be_archived?
-    super && Time.now.year - Date.parse(@publish_date).year > 2
+    super && Time.now.year - Date.parse(@last_played).year > 2
   end
 end
