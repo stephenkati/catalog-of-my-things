@@ -2,8 +2,12 @@ require 'json'
 
 def file_read(file)
   if File.exist?(file)
-    file_data = File.read(file)
-    JSON.parse(file_data)
+    if File.size(file).zero?
+      []
+    else
+      file_data = File.read(file)
+      JSON.parse(file_data)
+    end
   else
     []
   end
