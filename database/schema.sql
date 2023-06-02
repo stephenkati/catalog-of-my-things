@@ -2,9 +2,6 @@ CREATE DATABASE catalog;
 
 CREATE TABLE items(
   id INT SERIAL PRIMARY KEY,
-  label_id INT REFERENCES label(id),
-  author_id INT REFERENCES author(id),
-  genre_id INT REFERENCES genre(id)
 );
 
 CREATE TABLE book(
@@ -12,7 +9,10 @@ CREATE TABLE book(
   publisher VARCHAR(100),
   cover_state VARCHAR(50),
   publish_date DATE,
-  archived BOOLEAN DEFAULT FALSE
+  archived BOOLEAN DEFAULT FALSE,
+  label_id INT REFERENCES label(id),
+  author_id INT REFERENCES author(id),
+  genre_id INT REFERENCES genre(id)
 );
 
 CREATE TABLE label(
