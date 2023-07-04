@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [catalog-of-my-things-prac] <a name="about-project"></a>
+# 📖 [catalog-of-my-things] <a name="about-project"></a>
 
 **[catalog-of-my-things]** Is a console app that will help keep a record of different types of things: **books**, **music albums**, **movies**, and **games**.The data is stored in JSON files. A database with tables structure analogical to the program's class structure is prepared.
 
