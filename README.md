@@ -1,4 +1,4 @@
-# catalog-of-my-things-prac
+# catalog-of-my-things
 
 <a name="readme-top"></a>
 
@@ -27,7 +27,7 @@
 
 # 📖 [catalog-of-my-things-prac] <a name="about-project"></a>
 
-**[catalog-of-my-things-prac]** Is a console app that will help keep a record of different types of things: **books**, **music albums**, **movies**, and **games**.The data is stored in JSON files. A database with tables structure analogical to the program's class structure is prepared.
+**[catalog-of-my-things]** Is a console app that will help keep a record of different types of things: **books**, **music albums**, **movies**, and **games**.The data is stored in JSON files. A database with tables structure analogical to the program's class structure is prepared.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,8 +67,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd catalog-of-my-things-prac
-  git clone https://github.com/stephenkati/catalog-of-my-things-prac.git
+  cd catalog-of-my-things
+  git clone https://github.com/stephenkati/catalog-of-my-things.git
 ```
 
 ### Install
@@ -76,7 +76,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd catalog-of-my-things-prac
+  cd catalog-of-my-things
   bundle install
   gem install --no-document rubocop -v '>= 1.0, < 2.0'
   gem install rspec
@@ -131,7 +131,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/stephenkati/catalog-of-my-things-prac/issues).
+Feel free to check the [issues page](https://github.com/stephenkati/catalog-of-my-things/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
