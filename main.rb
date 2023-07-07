@@ -9,14 +9,13 @@ def display_prompts
   puts '2 - List all music albums'
   puts '3 - List of games'
   puts "4 - List all genres (e.g 'Comedy', 'Thriller')"
-  puts "5 - List all labels (e.g. 'Gift', 'New')"
-  puts "6 - List all authors (e.g. 'Stephen King')"
-  puts '7 - Add a book'
-  puts '8 - Add a music album'
-  puts '9 - Add a game'
-  puts '10 - Add_an_author'
-  puts '11 - Add a genre'
-  puts '12 - Exit'
+  puts "5 - List all authors (e.g. 'Stephen King')"
+  puts '6 - Add a book'
+  puts '7 - Add a music album'
+  puts '8 - Add a game'
+  puts '9 - Add_an_author'
+  puts '10 - Add a genre'
+  puts '11 - Exit'
   puts ' '
 end
 

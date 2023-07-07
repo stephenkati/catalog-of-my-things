@@ -22,18 +22,9 @@ class App
   def list_all_books
     @books = file_read('data/books.json')
     puts 'No books found' if @books.empty?
-    @books.each do |book|
-      puts "ID: #{book['id']}",
-           "Publish Date: #{book['publish_date']}, Publisher: #{book['publisher']}, Cover State: #{book['cover_state']}"
-    end
-    puts '=========================='
-  end
-
-  def list_all_labels
-    @labels = file_read('data/labels.json')
-    puts 'No Labels found' if @labels.empty?
-    @labels.each do |label|
-      puts "ID: #{label['id']}, Name: #{label['name']}, Color: #{label['color']}"
+    @books.each_with_index do |book, index|
+      puts "#{index} - Publish Date: #{book['publish_date']}",
+           "Publisher: #{book['publisher']}, Cover State: #{book['cover_state']}"
     end
     puts '=========================='
   end
@@ -42,7 +33,7 @@ class App
     @music_albums = file_read('data/music_albums.json')
     puts 'No music albums found' if @music_albums.empty?
 
-    @music_albums.each do |album, index|
+    @music_albums.each_with_index do |album, index|
       puts "#{index} - #{album['id']}",
            "Publish Date: #{album['publish_date']}, On Spotify: #{album['on_spotify']}"
     end
