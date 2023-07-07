@@ -11,15 +11,13 @@ describe Book do
     end
 
     it 'should be not archievable if cover state is good' do
-      # @book.cover_state = 'good'
-      # expect(@book.can_be_archived?).to eq(false)
-      puts @book.can_be_archived?.inspect
+      @book.cover_state = 'good'
+      expect(@book.can_be_archived?).to eq(false)
     end
 
     it 'should be archievable' do
       @book.publish_date = '2000-01-01'
       expect(@book.can_be_archived?).to eq(true)
     end
-
   end
 end
