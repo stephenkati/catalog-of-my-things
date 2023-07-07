@@ -1,22 +1,18 @@
-require_relative 'item'
+require './classes/item'
 
 class Book < Item
-  attr_reader :id
-  attr_accessor :publisher, :cover_state
+  attr_accessor :publisher, :cover_state, :genre, :author
 
-  def initialize(publish_date, publisher, cover_state)
+  def initialize(publisher, publish_date, genre, author, cover_state: 'good')
     super(publish_date)
-    @id = rand(1...1000)
     @publisher = publisher
     @cover_state = cover_state
+    @genre = genre
+    @author = author
   end
 
   def can_be_archived?
-    if @cover_state == 'bad' || super
-      true
-    else
-      false
-    end
+    super || cover_state == 'bad'
   end
 
   def to_hash
@@ -24,6 +20,8 @@ class Book < Item
       id: @id,
       publish_date: @publish_date,
       publisher: @publisher,
+      genre: @genre,
+      author: @author,
       cover_state: @cover_state
     }
   end
