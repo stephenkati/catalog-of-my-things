@@ -1,6 +1,8 @@
 require './app'
 
 def display_prompts
+  puts '=========================='
+  puts ' '
   puts 'Welcome to catalog of my things'
   puts ' '
   puts 'Choose an option from choices below:'

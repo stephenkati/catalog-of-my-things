@@ -26,7 +26,6 @@ class App
       puts "#{index} - Publish Date: #{book['publish_date']}",
            "Publisher: #{book['publisher']}, Cover State: #{book['cover_state']}"
     end
-    puts '=========================='
   end
 
   def list_all_music_albums
@@ -37,8 +36,6 @@ class App
       puts "#{index} - #{album['id']}",
            "Publish Date: #{album['publish_date']}, On Spotify: #{album['on_spotify']}"
     end
-
-    puts '=========================='
   end
 
   def list_of_games
@@ -51,8 +48,6 @@ class App
            "Publish Date: #{game['publish_date']}"
       "Multiplayer: #{game['multiplayer']}, Last played at: #{game['last_played_at']}"
     end
-
-    puts '=========================='
   end
 
   def list_all_genres
@@ -62,8 +57,6 @@ class App
     @genres.each_with_index do |genre, index|
       puts "#{index} - Name: #{genre['name']}"
     end
-
-    puts '=========================='
   end
 
   def list_all_authors
@@ -73,8 +66,6 @@ class App
     @authors.each_with_index do |author, index|
       puts "#{index} - Name: #{author['firstname']} #{author['lastname']}"
     end
-
-    puts '=========================='
   end
 
   def add_a_music_album
@@ -102,8 +93,6 @@ class App
     @music_albums << MusicAlbum.new(publish_date, on_spotify, genre, author).to_hash
     puts 'Music album added!'
     file_write('./data/music_albums.json', @music_albums)
-
-    puts '=========================='
   end
 
   def add_a_book
@@ -127,8 +116,6 @@ class App
     book = Book.new(publisher, publish_date, genre, author)
     @books << book
     file_write('./data/books.json', @books)
-
-    puts '=========================='
   end
 
   def add_a_game
@@ -144,8 +131,6 @@ class App
     @games << Game.new(publish_date, multiplayer, last_played_at)
     puts 'Game added!'
     file_write('./data/games.json', @games)
-
-    puts '=========================='
   end
 
   def add_a_genre
@@ -156,8 +141,6 @@ class App
     @genres << genre
     file_write('./data/genres.json', @genres)
     puts 'Genre added!'
-
-    puts '=========================='
   end
 
   def add_an_author
@@ -170,7 +153,5 @@ class App
     @authors << author
     file_write('./data/authors.json', @authors)
     puts 'Author added!'
-
-    puts '=========================='
   end
 end
